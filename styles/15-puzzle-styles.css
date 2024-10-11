@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Tilt+Warp:XROT@-27&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", sans-serif;
+  background-color: #1D1A2A;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  line-height: 2;
+  letter-spacing: 0.1rem;
+}
+
+main {
+  margin-block: 4rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.main-info {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: yellow;
+}
+a:hover {
+  color: cyan;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+footer {
+  font-size: 0.7rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+main {
+  margin-bottom: 6rem;
+}
+
+.main-heading {
+  color: cyan;
+}
+
+button {
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid transparent;
+  font-family: poppins, sans-serif;
+  cursor: pointer;
+  color: #1D1A2A;
+  text-transform: uppercase;
+  font-family: "press start 2p";
+  margin-block: 2rem;
+}
+
+button:hover {
+  background: cyan;
+}
+
+.stats {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(4, 50px);
+  gap: 5px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+
+.tile {
+  width: 50px;
+  /* max-width: 80px;  */
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: cyan;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+  color: #1D1A2A;
+}
+
+.empty {
+  background-color: #1D1A2A;
+}
+
+.win-modal {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  opacity: 1;
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #1D1A2A;
+}
+
+.accent {
+  color: cyan;
+}
+
+.hide {
+  display: none;
+}
+
+.animation {
+  animation: modal-animation 0.8s forwards;
+}
+
+@keyframes modal-animation {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=15-puzzle-styles.css.map */

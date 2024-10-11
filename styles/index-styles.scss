@@ -1,0 +1,129 @@
+@import 'globals';
+
+$snake-color: chartreuse;
+$puzzle-color: cyan; 
+$tic-tac-toe-color: orange;  
+$whackamole-color: magenta;
+$rock-paper-scissors-color: yellow; 
+
+.main-heading {
+    font-family:  "Tilt Warp", sans-serif;   
+    font-size: 2.5rem;   
+    transform:skew(-20deg) rotateX(50deg);
+    color:orange;
+    text-transform:uppercase;
+    text-shadow: 0 .5rem 0 #FF3D00,
+                 0 -.5rem #FF1744,
+                 0 0 5px white;
+    width: max-content;
+    margin: auto;
+}
+
+.games {
+    margin-block: 5rem; 
+    display: flex;
+    align-items: center;  
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@mixin border-color($color) {
+    background-color: $color;
+} 
+
+@mixin a-color($color) {
+    color: $color;
+}
+
+.game-li:nth-child(1):after, .game-li:nth-child(1):before { 
+    @include border-color($snake-color); 
+}
+ 
+.game-li:nth-child(2):after, .game-li:nth-child(2):before { 
+    @include border-color($puzzle-color); 
+} 
+
+.game-li:nth-child(3):after, .game-li:nth-child(3):before { 
+    @include border-color($tic-tac-toe-color); 
+}
+
+.game-li:nth-child(4):after, .game-li:nth-child(4):before { 
+    @include border-color($whackamole-color); 
+}
+
+.game-li:nth-child(5):after, .game-li:nth-child(5):before { 
+    @include border-color($rock-paper-scissors-color); 
+}
+
+.game-li {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .3));   
+    padding: 3rem 2rem;
+    flex-grow: 1; 
+    border-radius: .3rem;  
+    position: relative; 
+
+    &::after {
+        position: absolute;
+        content: '';
+        height: .1rem;
+        width: 100%;
+        top: 0;
+        left: 0; 
+        animation: card-animation 2s infinite; 
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: .1rem;
+        width: 100%;
+        bottom: 0;
+        left: 0;  
+        animation: card-animation 2s infinite linear reverse;   
+    }  
+}
+
+.game-li:nth-child(1) {
+    background: rgb(127, 255, 0, .3);   
+}
+
+.game-li:nth-child(2) {
+    background: rgba(0, 255, 255, 0.3); 
+} 
+
+.game-li:nth-child(3) {
+    background: rgb(255, 165, 0, .3); 
+}
+
+.game-li:nth-child(4) {
+    background: rgba(255, 0, 255, 0.3);
+}
+ 
+.game-li:nth-child(5) {
+    background: rgba(255, 255, 0, 0.3); 
+}
+
+@keyframes card-animation {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left
+    }
+      
+    50% {
+        transform: scaleX(1);
+        transform-origin: left
+    }
+      
+    51% {
+        transform: scaleX(1);
+        transform-origin: right
+    
+    }
+      
+    100% {
+        transform: scaleX(0); 
+        transform-origin: right
+    }
+}
+ 

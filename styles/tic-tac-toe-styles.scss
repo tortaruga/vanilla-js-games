@@ -1,0 +1,84 @@
+@import 'globals';
+
+.main-heading {
+    color: orange;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;  
+    max-width: 600px; 
+    margin: 4rem auto; 
+}
+
+button {
+    font-family: 'press start 2p';
+    font-size: .8rem;  
+    background: transparent;
+    border: 1px solid white; 
+    color: white; 
+    border-radius: .3rem; 
+    padding: 1rem;  
+    cursor: pointer;
+    flex-grow: 1; 
+    line-height: 1.2; 
+}
+
+button:hover {
+    color: orange;
+    border-color: orange;
+}
+
+.board {
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.tile {
+    width: 100px; 
+    aspect-ratio: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.no-border-left {
+    border-left: none;
+}
+
+.no-border-bottom {
+    border-bottom: none;
+}
+
+.game-over-display {
+    display: none;
+    background: white;
+    border-radius: .5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    width: 90%; 
+    max-width: 300px;
+    color: orange;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+ 
+.reset-button {
+    // margin: auto 10rem; 
+    color: magenta;
+    border: 1px solid magenta; 
+}

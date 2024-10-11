@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Tilt+Warp:XROT@-27&display=swap");
+
+$black: #1D1A2A;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: $black; 
+    padding: 1rem;
+    text-align: center; 
+    color: white; 
+    line-height: 2; 
+    letter-spacing: .1rem;
+} 
+
+main {
+    margin-block: 4rem;  
+    max-width: 700px;
+    margin: auto; 
+}
+
+.main-info {
+    font-size: .8rem; 
+} 
+
+a {
+    text-decoration: none; 
+    color: yellow; 
+
+    &:hover {
+        color: cyan; 
+    }
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none; 
+}
+
+button {
+    cursor: pointer; 
+}
+
+footer {
+    font-size: .7rem;
+}
