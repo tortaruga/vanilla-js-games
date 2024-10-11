@@ -6,7 +6,7 @@
 - [rock paper scissors](#rock-paper-scissors)
  
 
-[live website](https://tortaruga.github.io/vanilla-js-games/)git add 
+[live website](https://tortaruga.github.io/vanilla-js-games/)
 
 # overview
 
